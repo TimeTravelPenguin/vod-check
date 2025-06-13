@@ -1,0 +1,26 @@
+[package]
+name = "vod-check"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+chrono = { version = "0.4.41", features = ["serde"] }
+clap = { version = "4.5.40", features = ["derive", "env", "wrap_help"] }
+color-eyre = "0.6.5"
+dotenv_codegen = "0.15.0"
+dotenvy = "0.15.7"
+dotenvy_macro = "0.15.7"
+lazy_static = "1.5.0"
+ratatui = "0.29.0"
+reqwest = "0.12.15"
+serde = { version = "1.0.219", features = ["derive"] }
+thiserror = "2.0.12"
+tokio = { version = "1.45.0", features = ["full"] }
+twitch_api = { version = "0.7.2", features = [
+  "client",
+  "deny_unknown_fields",
+  "helix",
+  "reqwest",
+  "twitch_oauth2",
+] }
